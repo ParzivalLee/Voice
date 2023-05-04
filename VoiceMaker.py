@@ -17,8 +17,7 @@ class VoiceMaker:
         self.__url = URL
         self.__token = TOKEN
         self.__appKey = APPKEY
-        self.__outputDir = VM_OUTPUT_DIR
-        self.__outputFile = output_file + '.' + VM_AFORMAT
+        self.__outputFile = output_file
         self.tts = nls.NlsSpeechSynthesizer(url=self.__url,
                                             appkey=self.__appKey,
                                             token=self.__token,
@@ -36,12 +35,12 @@ class VoiceMaker:
         # 如果指定了输出文件，则使用指定的输出文件
         if output_file:
             self.__outputFile = output_file
-        if not os.path.exists(self.__outputDir):
-            os.mkdir(self.__outputDir)
-        self.__f = open(os.path.join(self.__outputDir, self.__outputFile), "wb")
+        self.__f = open(self.__outputFile, "wb")
         self.tts.start(text=text,
                        voice=voice,
-                       aformat=VM_AFORMAT)
+                       aformat=VM_AFORMAT,
+                       pitch_rate=VM_PITCH_RATE,
+                       speech_rate=VM_SPEED)
 
     def onMetainfo(self, message, *args):
         # print("meta info message=>{}".format(message))

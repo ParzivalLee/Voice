@@ -18,7 +18,7 @@ python setup.py install
 - _TOKEN_ 阿里云提供的token
 - _APPKEY_ 阿里云控制台的app key
 
-# 2. 语音识别类 VoiceMaker.py
+# 2. 语音合成类 VoiceMaker.py
 ## 2.1 config.py 参数配置
 - _VM_OUTPUT_DIR_ 合成的语音输出的文件夹
 - _VM_OUTPUT_FILE_ 合成的语音输出的文件（不需要加后缀）
@@ -36,3 +36,6 @@ vm = Voice.VoiceMaker(output_file="输出文件夹")
 # text 为要合成语音的文本，必不可少的参数，另外两项参数可在config.py中配置
 vm.start(text="要合成语音的文本", output_file="要输出的文件", voice="声音选择")
 ```
+
+# 3. 语音识别类 VoiceReader.py
+## 3.1 config.py 参数配置

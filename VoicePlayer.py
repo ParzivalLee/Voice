@@ -5,10 +5,11 @@
 """
 
 import pyaudio
+from .config import *
 
 
 class VoicePlayer:
-    def __init__(self, voice_file='output/output.pcm', channels=1, width=2, rate=16000):
+    def __init__(self, voice_file, channels=VP_CHANNELS, width=2, rate=VP_RATE):
         self.voiceFile = voice_file
         self.channels = channels
         self.width = width
