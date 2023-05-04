@@ -8,9 +8,9 @@ import pyaudio
 # 请求地址
 URL = "wss://nls-gateway.cn-shanghai.aliyuncs.com/ws/v1"
 # Token
-TOKEN = "53d02637a1d542939873d4520624d5a5"
+TOKEN = "这里输入你的token"
 # App Key
-APPKEY = "OmQUnE87U6vdzFvU"
+APPKEY = "这里输入你的app key"
 
 """
 VoiceMaker
